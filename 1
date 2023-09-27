@@ -1,4 +1,53 @@
-	tiempo (s)	pasos	muestreo
-caminata normal	4.13	8	1.93
-caminata moderada	3.21	6	1.86
-correr	1.68	4	2.88
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Tiempo de caminata normal en segundos
+t_caminata_normal = 4.13
+
+# Pasos de caminata normal
+p_caminata_normal = 8
+
+# Muestreo de caminata normal
+m_caminata_normal = 1.93
+
+# Tiempo de caminata moderada en segundos
+t_caminata_moderada = 3.21
+
+# Pasos de caminata moderada
+p_caminata_moderada = 6
+
+# Muestreo de caminata moderada
+m_caminata_moderada = 1.86
+
+# Tiempo de correr en segundos
+t_correr = 1.68
+
+# Pasos de correr
+p_correr = 4
+
+# Muestreo de correr
+m_correr = 2.88
+
+# Crear un arreglo de tiempo
+tiempo = np.array([t_caminata_normal, t_caminata_moderada, t_correr])
+
+# Crear un arreglo de pasos
+pasos = np.array([p_caminata_normal, p_caminata_moderada, p_correr])
+
+# Crear un arreglo de muestreo
+muestreo = np.array([m_caminata_normal, m_caminata_moderada, m_correr])
+
+# Crear un arreglo de etiquetas
+etiquetas = np.array(['Caminata normal', 'Caminata moderada', 'Correr'])
+
+# Graficar los resultados
+plt.bar(etiquetas, tiempo)
+plt.xlabel('Tipo de movimiento')
+plt.ylabel('Tiempo (s)')
+plt.title('Tiempo de movimiento')
+plt.show()
+
+plt.bar(etiquetas, pasos)
+plt.xlabel('Tipo de movimiento')
+plt.ylabel('Pasos')
+plt.title('Pasos de movimiento')
